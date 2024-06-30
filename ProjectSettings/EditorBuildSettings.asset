@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Intro Scene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
   - enabled: 0
@@ -19,6 +19,8 @@ EditorBuildSettings:
     guid: aaada9d86638bbe44b389f54b2ffe6df
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2238d457089b9494896515a25debf01c,
+      type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: fcdd36b8a6899a048b902b2c1fb7991f,
       type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 6de2218f9277f0246ad3ad1f5853dc49, type: 2}
