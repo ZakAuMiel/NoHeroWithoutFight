@@ -1,24 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChangeOnTrigger : MonoBehaviour
+public class ChangeScene : MonoBehaviour
 {
-    public UnityEditor.SceneAsset sceneToLoad; // Variable pour stocker la référence à la scène à charger
+    public int sceneID; // Utiliser l'ID de la scène
+
+    void Start()
+    {
+        if (sceneID < 0 || sceneID >= SceneManager.sceneCountInBuildSettings)
+        {
+            Debug.LogError("Scene ID is out of range.");
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        // Vérifie si le joueur entre en collision avec le trigger
         if (other.CompareTag("Player"))
         {
-            // Vérifie que la scène à charger est valide
-            if (sceneToLoad != null)
+            if (sceneID >= 0 && sceneID < SceneManager.sceneCountInBuildSettings)
             {
-                // Charge la scène spécifiée
-                SceneManager.LoadScene(sceneToLoad.name);
+                SceneManager.LoadScene(sceneID);
             }
             else
             {
-                Debug.LogError("Scene to load is not assigned.");
+                Debug.LogError("Scene ID is out of range.");
             }
         }
     }
