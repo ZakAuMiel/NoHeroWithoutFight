@@ -136,6 +136,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour Environment
       objectReference: {fileID: 0}
+    - target: {fileID: 3501197046609638859, guid: af20574b9912bb247b3ba44dcd7734fc,
+        type: 3}
+      propertyPath: m_CustomReticle
+      value: 
+      objectReference: {fileID: 3641371925606271686, guid: 0f5f3d4f7f369374988018423d278284,
+        type: 3}
     - target: {fileID: 4739686497084885199, guid: af20574b9912bb247b3ba44dcd7734fc,
         type: 3}
       propertyPath: m_LocalPosition.x

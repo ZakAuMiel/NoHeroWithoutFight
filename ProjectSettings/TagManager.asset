@@ -8,6 +8,7 @@ TagManager:
   - Flame
   - Water
   - Destroyer
+  - Teleport
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Bow
   - 
   - 
   - 
