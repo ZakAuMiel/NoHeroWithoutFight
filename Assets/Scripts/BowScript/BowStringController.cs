@@ -24,14 +24,12 @@ public class BowStringController : MonoBehaviour
     public UnityEvent OnBowPulled;
     public UnityEvent<float> OnBowReleased;
 
-
-
     private void Awake()
     {
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
     }
 
-    private  void Start()
+    private void Start()
     {
         interactable.selectEntered.AddListener(PrepareBowString);
         interactable.selectExited.AddListener(ResetBowString);
@@ -41,7 +39,6 @@ public class BowStringController : MonoBehaviour
     {
         OnBowReleased?.Invoke(strength);
         strength = 0;
-
 
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
@@ -61,15 +58,11 @@ public class BowStringController : MonoBehaviour
         if (interactor != null)
         {
             Vector3 midPointLocalSpace = midPointParentObject.InverseTransformPoint(midPointGrabObject.position);
-
             float midPointLocalZabs = Mathf.Abs(midPointLocalSpace.z);
 
             HandleStringPushedBackToStart(midPointLocalSpace);
-
             HandleStringPulledBackToLimit(midPointLocalZabs, midPointLocalSpace);
-
             HandlePullingString(midPointLocalZabs, midPointLocalSpace);
-
 
             bowStringRenderer.CreateString(midPointVisualObject.position);
         }
@@ -84,9 +77,9 @@ public class BowStringController : MonoBehaviour
         }
     }
 
-    private float Remap(float value, int fromMin, float fromMax, int toMin, int toMax)
+    private float Remap(float value, float fromMin, float fromMax, float toMin, float toMax)
     {
-        return (value - fromMin) / (fromMax - fromMin) * (toMax - toMin) / + toMin;
+        return (value - fromMin) / (fromMax - fromMin) * (toMax - toMin) + toMin;
     }
 
     private void HandleStringPulledBackToLimit(float midPointLocalZabs, Vector3 midPointLocalSpace)
