@@ -13,7 +13,10 @@ public class BowStringController : MonoBehaviour
     private XRGrabInteractable interactable;
 
     [SerializeField]
-    private Transform midPointGrabObject;
+    private Transform midPointGrabObject, midPointVisualObject, midPointParentObject;
+
+    [SerializeField]
+    private float bowStringStrengthLimit = 0.3f;
 
     private Transform interactor;
     private void Awake()
@@ -31,6 +34,8 @@ public class BowStringController : MonoBehaviour
     {
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
+        midPointVisualObject.localPosition = Vector3.zero;
+
         bowStringRenderer.CreateString(null);
     }
 
@@ -43,7 +48,42 @@ public class BowStringController : MonoBehaviour
     {
         if (interactor != null)
         {
-            bowStringRenderer.CreateString(midPointGrabObject.transform.position);
+            Vector3 midPointLocalSpace = midPointParentObject.InverseTransformPoint(midPointGrabObject.position);
+
+            float midPointLocalZabs = Mathf.Abs(midPointLocalSpace.z);
+
+            HandleStringPushedBackToStart(midPointLocalSpace);
+
+            HandleStringPulledBackToLimit(midPointLocalZabs, midPointLocalSpace);
+
+            HandlePullingString(midPointLocalZabs, midPointLocalSpace);
+
+
+            bowStringRenderer.CreateString(midPointVisualObject.position);
+        }
+    }
+
+    private void HandlePullingString(float midPointLocalZabs, Vector3 midPointLocalSpace)
+    {
+        if (midPointLocalSpace.z < 0 && midPointLocalZabs < bowStringStrengthLimit)
+        {
+            midPointVisualObject.localPosition = new Vector3(0, 0, midPointLocalSpace.z);
+        }
+    }
+
+    private void HandleStringPulledBackToLimit(float midPointLocalZabs, Vector3 midPointLocalSpace)
+    {
+        if (midPointLocalSpace.z < 0 && midPointLocalZabs >= bowStringStrengthLimit)
+        {
+            midPointVisualObject.localPosition = new Vector3(0, 0, -bowStringStrengthLimit);
+        }
+    }
+
+    private void HandleStringPushedBackToStart(Vector3 midPointLocalSpace)
+    {
+        if (midPointLocalSpace.z > 0)
+        {
+            midPointVisualObject.localPosition = Vector3.zero;
         }
     }
 }
