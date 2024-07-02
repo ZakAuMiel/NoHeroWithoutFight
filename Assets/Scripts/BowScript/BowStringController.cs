@@ -18,7 +18,14 @@ public class BowStringController : MonoBehaviour
     [SerializeField]
     private float bowStringStrengthLimit = 0.3f;
 
+    private float strength;
     private Transform interactor;
+
+    public UnityEvent OnBowPulled;
+    public UnityEvent<float> OnBowReleased;
+
+
+
     private void Awake()
     {
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
@@ -32,6 +39,10 @@ public class BowStringController : MonoBehaviour
 
     private void ResetBowString(SelectExitEventArgs arg0)
     {
+        OnBowReleased?.Invoke(strength);
+        strength = 0;
+
+
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
         midPointVisualObject.localPosition = Vector3.zero;
@@ -42,6 +53,7 @@ public class BowStringController : MonoBehaviour
     private void PrepareBowString(SelectEnterEventArgs arg0)
     {
         interactor = arg0.interactorObject.transform;
+        OnBowPulled?.Invoke();
     }
 
     private void Update()
@@ -67,14 +79,21 @@ public class BowStringController : MonoBehaviour
     {
         if (midPointLocalSpace.z < 0 && midPointLocalZabs < bowStringStrengthLimit)
         {
+            strength = Remap(midPointLocalZabs, 0, bowStringStrengthLimit, 0, 1);
             midPointVisualObject.localPosition = new Vector3(0, 0, midPointLocalSpace.z);
         }
+    }
+
+    private float Remap(float value, int fromMin, float fromMax, int toMin, int toMax)
+    {
+        return (value - fromMin) / (fromMax - fromMin) * (toMax - toMin) / + toMin;
     }
 
     private void HandleStringPulledBackToLimit(float midPointLocalZabs, Vector3 midPointLocalSpace)
     {
         if (midPointLocalSpace.z < 0 && midPointLocalZabs >= bowStringStrengthLimit)
         {
+            strength = 1;
             midPointVisualObject.localPosition = new Vector3(0, 0, -bowStringStrengthLimit);
         }
     }
@@ -83,6 +102,7 @@ public class BowStringController : MonoBehaviour
     {
         if (midPointLocalSpace.z > 0)
         {
+            strength = 0;
             midPointVisualObject.localPosition = Vector3.zero;
         }
     }
