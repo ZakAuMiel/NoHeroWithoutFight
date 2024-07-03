@@ -18,7 +18,14 @@ public class BowStringController : MonoBehaviour
     [SerializeField]
     private float bowStringStrengthLimit = 0.3f;
 
-    private float strength;
+    private float strength, previousStrength;
+
+    [SerializeField]
+    private float stringSoundThreshold = 0.001f;
+
+    [SerializeField]
+    private AudioSource stringSound;
+
     private Transform interactor;
 
     public UnityEvent OnBowPulled;
@@ -39,6 +46,10 @@ public class BowStringController : MonoBehaviour
     {
         OnBowReleased?.Invoke(strength);
         strength = 0;
+        previousStrength = 0;
+        stringSound.pitch = 1;
+        stringSound.Stop();
+
 
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
@@ -60,6 +71,8 @@ public class BowStringController : MonoBehaviour
             Vector3 midPointLocalSpace = midPointParentObject.InverseTransformPoint(midPointGrabObject.position);
             float midPointLocalZabs = Mathf.Abs(midPointLocalSpace.z);
 
+            previousStrength = strength;
+
             HandleStringPushedBackToStart(midPointLocalSpace);
             HandleStringPulledBackToLimit(midPointLocalZabs, midPointLocalSpace);
             HandlePullingString(midPointLocalZabs, midPointLocalSpace);
@@ -72,8 +85,34 @@ public class BowStringController : MonoBehaviour
     {
         if (midPointLocalSpace.z < 0 && midPointLocalZabs < bowStringStrengthLimit)
         {
+            if (stringSound.isPlaying == false && strength <= 0.001f)
+            {
+                stringSound.Play();
+            }
             strength = Remap(midPointLocalZabs, 0, bowStringStrengthLimit, 0, 1);
             midPointVisualObject.localPosition = new Vector3(0, 0, midPointLocalSpace.z);
+
+            PlayStringPullSound();
+        }
+    }
+
+    private void PlayStringPullSound()
+    {
+        if (Mathf.Abs(strength - previousStrength) > stringSoundThreshold)
+        {
+            if (strength < previousStrength)
+            {
+                stringSound.pitch = -1;
+            }
+            else
+            {
+                stringSound.pitch = 1;
+            }
+            stringSound.UnPause();
+        }
+        else
+        {
+            stringSound.Pause();
         }
     }
 
@@ -86,6 +125,7 @@ public class BowStringController : MonoBehaviour
     {
         if (midPointLocalSpace.z < 0 && midPointLocalZabs >= bowStringStrengthLimit)
         {
+            stringSound.Pause();
             strength = 1;
             midPointVisualObject.localPosition = new Vector3(0, 0, -bowStringStrengthLimit);
         }
@@ -95,6 +135,8 @@ public class BowStringController : MonoBehaviour
     {
         if (midPointLocalSpace.z > 0)
         {
+            stringSound.pitch = 1;
+            stringSound.Stop();
             strength = 0;
             midPointVisualObject.localPosition = Vector3.zero;
         }

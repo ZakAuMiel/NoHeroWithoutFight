@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Intro Scene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Maze.unity
     guid: c41c625a8387e384282b5a39b2b5a912
   - enabled: 1
     path: Assets/Scenes/Archery Scene.unity
     guid: e9115cecddc38ab4fb58f8f78b5a3a7a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Parkour Scene.unity
     guid: aaada9d86638bbe44b389f54b2ffe6df
   m_configObjects:

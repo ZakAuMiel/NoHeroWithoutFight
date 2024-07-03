@@ -139,8 +139,9 @@ GameObject:
   - component: {fileID: 7259823255695183012}
   - component: {fileID: 9101737468492484243}
   - component: {fileID: 8752787751605355303}
+  - component: {fileID: 7944784393838282450}
   m_Layer: 7
-  m_Name: ArrowParent 1
+  m_Name: ArrowParent
   m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,6 +203,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 9101737468492484243}
+--- !u!114 &7944784393838282450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127284744868604939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9f976d49462bc458fad1a3d930e339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 9101737468492484243}
+  myCollider: {fileID: 1526688934374110416}
+  stickingArrowPrefab: {fileID: 8335618153182137922, guid: e9055bbf6992cca4ebaeccd925a23cad,
+    type: 3}
 --- !u!1 &8787966638300296422
 GameObject:
   m_ObjectHideFlags: 0

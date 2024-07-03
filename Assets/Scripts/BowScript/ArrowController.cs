@@ -10,6 +10,10 @@ public class ArrowController : MonoBehaviour
     [SerializeField]
     private float arrowMaxSpeed = 10;
 
+    [SerializeField]
+    private AudioSource bowRealeaseSound;
+
+
     public void PrepareArrow()
     {
         midPointVisual.SetActive(true);
@@ -17,6 +21,7 @@ public class ArrowController : MonoBehaviour
 
     public void ReleaseArrow(float strength)
     {
+        bowRealeaseSound.Play();
         midPointVisual.SetActive(false);
 
         // Validation de la force
