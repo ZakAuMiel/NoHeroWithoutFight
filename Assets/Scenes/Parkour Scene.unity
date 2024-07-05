@@ -136,12 +136,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour Environment
       objectReference: {fileID: 0}
+    - target: {fileID: 2473752004556327268, guid: af20574b9912bb247b3ba44dcd7734fc,
+        type: 3}
+      propertyPath: m_ClimbProvider
+      value: 
+      objectReference: {fileID: 1979785612}
     - target: {fileID: 3501197046609638859, guid: af20574b9912bb247b3ba44dcd7734fc,
         type: 3}
       propertyPath: m_CustomReticle
       value: 
       objectReference: {fileID: 3641371925606271686, guid: 0f5f3d4f7f369374988018423d278284,
         type: 3}
+    - target: {fileID: 3533686404174006891, guid: af20574b9912bb247b3ba44dcd7734fc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.836
+      objectReference: {fileID: 0}
     - target: {fileID: 4739686497084885199, guid: af20574b9912bb247b3ba44dcd7734fc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20453,8 +20463,50 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3922433372919813585, guid: b9fd18d262655c947b9f3731ff3e4d83,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1979785612}
   m_SourcePrefab: {fileID: 100100000, guid: b9fd18d262655c947b9f3731ff3e4d83, type: 3}
+--- !u!114 &1979785610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6905526748406392459, guid: b9fd18d262655c947b9f3731ff3e4d83,
+    type: 3}
+  m_PrefabInstance: {fileID: 1979785609}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979785611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1979785611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3922433372919813585, guid: b9fd18d262655c947b9f3731ff3e4d83,
+    type: 3}
+  m_PrefabInstance: {fileID: 1979785609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1979785612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979785611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 496880615cd240be960d436c1c8ae570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 1979785610}
+  m_ClimbSettings:
+    m_UseConstant: 1
+    m_ConstantValue:
+      m_AllowFreeXMovement: 1
+      m_AllowFreeYMovement: 1
+      m_AllowFreeZMovement: 1
+    m_Variable: {fileID: 0}
 --- !u!114 &1970633790135185296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20496,7 +20548,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 0.3
@@ -20529,7 +20581,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1

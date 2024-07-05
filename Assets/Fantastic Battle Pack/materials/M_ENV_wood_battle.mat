@@ -26,11 +26,13 @@ Material:
   m_ModifiedSerializedProperties: 24
   m_ValidKeywords:
   - _NORMALMAP
+  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     RenderType: Opaque
   disabledShaderPasses: []
@@ -58,13 +60,15 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _Cull: 2
+    - _Cull: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Metallic: 0.781
     - _Parallax: 0.005
     - _Smoothness: 1
+    - _SmoothnessTextureChannel: 1
+    - _WorkflowMode: 0
     m_Colors:
-    - _BaseColor: {r: 0.5660378, g: 0.24724567, b: 0.17354932, a: 1}
-    - _Color: {r: 0.5660378, g: 0.24724564, b: 0.1735493, a: 1}
+    - _BaseColor: {r: 0.5660378, g: 0.3167864, b: 0.258989, a: 1}
+    - _Color: {r: 0.5660378, g: 0.31678638, b: 0.25898898, a: 1}
   m_BuildTextureStacks: []
