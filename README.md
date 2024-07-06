@@ -25,4 +25,8 @@ PC VR
 ![image](https://github.com/ZakAuMiel/NoHeroWithoutFight/assets/90613485/60f989ba-5b00-469e-a5cf-f22506ee5c7b)
 ![image](https://github.com/ZakAuMiel/NoHeroWithoutFight/assets/90613485/c8e512a4-9721-4214-b9f5-1a57b252fae9)
 
+# Try it on SideQuest ! 
+
+https://sidequestvr.com/app/35778/noherowithoutfight
+
 
