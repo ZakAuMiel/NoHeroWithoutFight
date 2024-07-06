@@ -1107,10 +1107,10 @@
                 {
                     "name": "",
                     "id": "b30e2d62-876f-48de-9932-775a854699a7",
-                    "path": "<XRController>{RightHand}/primaryButton",
+                    "path": "<XRController>{RightHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Continuous Move",
                     "action": "DropStone",
                     "isComposite": false,
                     "isPartOfComposite": false
