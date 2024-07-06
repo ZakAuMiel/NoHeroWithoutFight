@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovingTarget : MonoBehaviour, IHittable
 {
     private Rigidbody rb;
-    private bool stopped = false;
+    public bool stopped = false;
 
     private Vector3 nextposition;
     private Vector3 originPosition;
