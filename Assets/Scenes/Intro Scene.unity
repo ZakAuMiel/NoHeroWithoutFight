@@ -286,6 +286,84 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fadfc3a4a97a21d4ca275c19023327fe, type: 3}
+--- !u!1001 &695808204
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 148583292630126789, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_text
+      value: "Walk,\n\n teleport yourself to the ancient rock\n\n overcome the challenges
+        that will stand before you\n\n\n and be the hero we are waiting for\n\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377701540597322783, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.776
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377701540597322783, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.290158
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377701540597322783, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377701540597322783, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.011003782
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377701540597322783, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377701540597322783, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9999395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377701540597322783, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377701540597322783, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377701540597322783, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 178.739
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377701540597322783, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844840293179428215, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      propertyPath: m_Name
+      value: Info 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6227671587308818621, guid: 45600a787dbebd645aef1dea978b9a4a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: 45600a787dbebd645aef1dea978b9a4a, type: 3}
 --- !u!1001 &1075322561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19088,9 +19166,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5be7c17f651cb4e4581e38b20313ffd1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0fdf300397856d74eb50738c72b41f84, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -32380,3 +32458,4 @@ SceneRoots:
   - {fileID: 1586345290}
   - {fileID: 609726113}
   - {fileID: 2071233761}
+  - {fileID: 695808204}
