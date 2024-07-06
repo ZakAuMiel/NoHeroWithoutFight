@@ -6,13 +6,10 @@ public class TargetManager : MonoBehaviour
     [SerializeField]
     private GameObject teleporter; // Le téléporteur à activer
 
-    private List<MovingTarget> targets;
+    public List<MovingTarget> targets; // Liste publique de cibles
 
     private void Start()
     {
-        // Trouvez toutes les cibles dans la scène
-        targets = new List<MovingTarget>(FindObjectsOfType<MovingTarget>());
-
         // Assurez-vous que le téléporteur est désactivé au début
         teleporter.SetActive(false);
     }
@@ -22,7 +19,10 @@ public class TargetManager : MonoBehaviour
         // Vérifiez si toutes les cibles sont touchées
         foreach (MovingTarget target in targets)
         {
-        
+            if(target.stopped == false)
+            {
+                return;
+            }
         }
 
         // Si toutes les cibles sont touchées, activez le téléporteur

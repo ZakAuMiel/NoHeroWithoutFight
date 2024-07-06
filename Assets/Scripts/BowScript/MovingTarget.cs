@@ -19,6 +19,9 @@ public class MovingTarget : MonoBehaviour, IHittable
     [SerializeField]
     private float arriveThreshold, movementRadius = 2, speed = 1;
 
+    [SerializeField]
+    private TargetManager targetManager; // Référence au TargetManager
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -46,6 +49,7 @@ public class MovingTarget : MonoBehaviour, IHittable
         {
             rb.isKinematic = false;
             stopped = true;
+            targetManager.CheckTargets(); // Vérifiez l'état des cibles
         }
     }
 
