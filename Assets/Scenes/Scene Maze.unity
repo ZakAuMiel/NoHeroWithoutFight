@@ -1460,6 +1460,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8050770507831145415, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050770507831145415, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050770507831145415, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050770507831145464, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3167191764750897379, guid: f9aacf07f02fb1742833dc9a181f978a,
+        type: 3}
+    - target: {fileID: 8050770507831145464, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050770507831145464, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 61dae1cd54b2c3d4eacb50ea7e720da0, type: 2}
+    - target: {fileID: 8050770507831145465, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.178136
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050770507831145465, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.178136
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050770507831145465, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.178136
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050770507831145465, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050770507831145465, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.033
+      objectReference: {fileID: 0}
     - target: {fileID: 8050770507831145466, guid: 8ab6e3a05b6ad284a88dcff5d2ba0384,
         type: 3}
       propertyPath: m_StaticEditorFlags
