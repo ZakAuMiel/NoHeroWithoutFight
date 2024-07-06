@@ -116,7 +116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2556996700325514123}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.9988283, z: -0, w: -0.048395623}
+  m_LocalRotation: {x: -0, y: -0.99882823, z: 0, w: -0.048396423}
   m_LocalPosition: {x: 13.9348955, y: 10.206, z: 9.925531}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -163,8 +163,8 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1.8
-  m_Radius: 0.25
-  m_SlopeLimit: 45
+  m_Radius: 0.2
+  m_SlopeLimit: 50
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -182,8 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LocomotionProvider: {fileID: 5240753694791180265}
-  m_MinHeight: 1.8
-  m_MaxHeight: 1.8
+  m_MinHeight: 1
+  m_MaxHeight: 2
 --- !u!114 &5137898350284210456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.2
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}

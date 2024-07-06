@@ -28,10 +28,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9206901786814590189}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.72361773, z: -0, w: 0.69020104}
+  m_LocalRotation: {x: 0, y: -0.723618, z: 0, w: 0.69020075}
   m_LocalPosition: {x: 14.16, y: 10.04, z: 3.5}
-  m_LocalScale: {x: 3, y: 1, z: 3}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.6500001, y: 0.55, z: 1.6500001}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8050770508261305608}
   m_Father: {fileID: 0}
@@ -105,8 +105,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.8704855, y: 1.0943269, z: 0.9717883}
-  m_Center: {x: 0.064756796, y: 0.047159318, z: -0.015919719}
+  m_Size: {x: 1.0044336, y: 2.0886056, z: 1.0319344}
+  m_Center: {x: 0.13172987, y: 0.54429245, z: -0.045992497}
 --- !u!114 &8491440869737920452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5feb2d5782dad514aaf0b0cfb122b0c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: {fileID: 102900000, guid: c41c625a8387e384282b5a39b2b5a912, type: 3}
+  sceneID: 3
 --- !u!1001 &3380884375231211440
 PrefabInstance:
   m_ObjectHideFlags: 0
